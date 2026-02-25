@@ -1,7 +1,16 @@
 import React from "react";
+import Sidebar from "./components/Sidebar";
+import Player from "./components/Player";
 
 const App = () => {
-  return <div className="text-9xl text-blue-300 mt-50 ml-30">matakoo</div>;
+  return (
+    <div className="h-screen bg-black">
+      <div className="h-[90%] flex">
+        <Sidebar />
+      </div>
+      <Player />
+    </div>
+  );
 };
 
 export default App;
