@@ -1,5 +1,3 @@
-// import { assets } from "../assets/assets";
-
 const AlbumItem = ({ image, name, desc, id }) => {
   return (
     <div>
