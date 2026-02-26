@@ -13,6 +13,7 @@ const Player = () => {
     time,
     previous,
     next,
+    seekSong,
   } = useContext(PlayerContext);
 
   return (
@@ -72,6 +73,7 @@ const Player = () => {
 
           <div
             ref={seekBg}
+            onClick={seekSong}
             className="w-[60vw] max-w-125 bg-gray-300 rounded-full cursor-pointer"
           >
             <hr
@@ -80,7 +82,6 @@ const Player = () => {
             />
           </div>
 
-          {/* Total Time Display with 2-digit seconds */}
           <p>
             {time.totalTime.minute}:
             {String(time.totalTime.second).padStart(2, "0")}
