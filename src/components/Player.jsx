@@ -1,15 +1,15 @@
 import { useContext } from "react";
-import { songsData, assets } from "../assets/assets";
+import { assets } from "../assets/assets";
 import { PlayerContext } from "../context/PlayerContext";
 
 const Player = () => {
-  const { seekBar, seekBg, playStatus, play, pause } =
+  const { seekBar, seekBg, playStatus, play, pause, track, time } =
     useContext(PlayerContext);
 
   return (
     <div className="h-[10%] bg-black flex justify-between items-center text-white px-4">
       <div className="hidden lg:flex items-center gap-4">
-        <img className="w-12" src={songsData[0].image} alt="" />
+        <img className="w-12" src={track.image} alt="" />
         <div>
           <p>{track.name}</p>
           <p>{track.desc.slice(0, 12)}</p>
@@ -24,6 +24,7 @@ const Player = () => {
             alt=""
           />
           <img className="w-4 cursor-pointer" src={assets.prev_icon} alt="" />
+
           {playStatus ? (
             <img
               onClick={pause}
@@ -43,18 +44,28 @@ const Player = () => {
           <img className="w-4 cursor-pointer" src={assets.next_icon} alt="" />
           <img className="w-4 cursor-pointer" src={assets.loop_icon} alt="" />
         </div>
+
         <div className="flex items-center gap-5">
-          <p>1:08</p>
+          <p>
+            {time.currentTime.minute}:
+            {String(time.currentTime.second).padStart(2, "0")}
+          </p>
+
           <div
             ref={seekBg}
             className="w-[60vw] max-w-125 bg-gray-300 rounded-full cursor-pointer"
           >
             <hr
               ref={seekBar}
-              className="h-1 border-none w-5 bg-green-800 rounded-full"
+              className="h-1 border-none w-0 bg-green-800 rounded-full"
             />
           </div>
-          <p>3:20</p>
+
+          {/* Total Time Display with 2-digit seconds */}
+          <p>
+            {time.totalTime.minute}:
+            {String(time.totalTime.second).padStart(2, "0")}
+          </p>
         </div>
       </div>
 
