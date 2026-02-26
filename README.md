@@ -1,16 +1,58 @@
-# React + Vite
+# Musica 🎧
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A lightweight Spotify-inspired music player built with **React.js** to sharpen core frontend skills such as state management, component composition and UI-driven logic.
 
-Currently, two official plugins are available:
+This project focuses on **replicating familiar UX patterns** found in real-world products while keeping the implementation intentionally simple and readable.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Clean UI. Predictable state. No unnecessary abstractions.
 
-## React Compiler
+<img width="1512" height="982" alt="Screenshot 2026-02-26 at 22 57 11" src="https://github.com/user-attachments/assets/6a884f26-7d72-4b7a-82d0-597ebb9fbf70" />
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
-## Expanding the ESLint configuration
+**[▶ Live Demo →](https://musica-blond.vercel.app/)**
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 🎵 Features
+
+- Play / pause music
+- Track progress visualization
+- Track switching
+- Active song highlighting
+- Responsive layout
+- Clean, Spotify-inspired UI
+
+---
+
+## ⚙️ Tech Stack
+
+- **React.js**
+- **JavaScript (ES6+)**
+- **TailwindCSS**
+
+No backend.  
+No authentication.  
+No external state libraries.
+
+This keeps the focus on **React fundamentals**, not infrastructure.
+
+---
+
+## 🚀 Installation & Setup
+Clone the repository and install dependencies:
+
+```bash
+npm install
+```
+
+##🧩 Project Structure
+
+```
+/
+├── src/
+│   ├── components/   # Reusable UI components
+│   ├── assets/         # Track metadata
+│   ├── context/       # PlayerContext
+│   └── App.jsx       # Root component
+└── public/
+```
