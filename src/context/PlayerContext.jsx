@@ -23,6 +23,15 @@ const PlayerContextProvider = (props) => {
     },
   });
 
+  const play = () => {
+    audioRef.current.play();
+    setPlayStatus(true);
+  };
+  const pause = () => {
+    audioRef.current.pause();
+    setPlayStatus(false);
+  };
+
   const contextValue = {
     audioRef,
     seekBar,
@@ -33,6 +42,8 @@ const PlayerContextProvider = (props) => {
     setPlayStatus,
     time,
     setTime,
+    play,
+    pause,
   };
 
   return (
